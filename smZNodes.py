@@ -798,7 +798,7 @@ def run(clip: comfy.sd.CLIP, text, parser, mean_normalization,
 
 # ========================================================================
 
-from server import PromptServer
+#from server import PromptServer
 def prompt_handler(json_data):
     data=json_data['prompt']
     steps_validator = lambda x: isinstance(x, (int, float, str))
@@ -901,8 +901,8 @@ def is_prompt_editing_str(t: str):
                 return True
     return False
 
-if hasattr(PromptServer.instance, 'add_on_prompt_handler'):
-    PromptServer.instance.add_on_prompt_handler(prompt_handler)
+#if hasattr(PromptServer.instance, 'add_on_prompt_handler'):
+#    PromptServer.instance.add_on_prompt_handler(prompt_handler)
 
 # ========================================================================
 def bounded_modulo(number, modulo_value):
